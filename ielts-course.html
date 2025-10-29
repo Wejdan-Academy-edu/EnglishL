@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>دورة IELTS الاحترافية - أكاديمية وجدان للتدريب</title>
+  <meta name="description" content="دورة IELTS الاحترافية مع أكاديمية وجدان - 32 محاضرة، 200 نموذج، متابعة شخصية، وضمان النجاح">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- نفس ستايل صفحة STEP مع اختلاف النصوص فقط -->
+  <style>
+    :root{
+      --primary-gold:#D4AF37;
+      --dark:#0f172a;
+      --gray:#6b7280;
+      --success:#16a34a;
+      --warning:#f59e0b;
+      --danger:#dc2626;
+    }
+    body{font-family:'Tajawal',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue","Noto Sans Arabic",Arial,sans-serif;}
+
+    .course-hero{
+      background: linear-gradient(135deg, #2C5F2D, #1a3a1b, #0d1f0e);
+      padding:120px 0 80px;
+      position:relative;
+      overflow:hidden;
+    }
+    .course-hero::before{
+      content:'';
+      position:absolute; inset:0;
+      background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23D4AF37" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom / cover;
+    }
+    .hero-content{ position:relative; z-index:2; }
+    .hero-info-box{
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      border:2px solid rgba(212,175,55,0.3);
+      border-radius:20px;
+      padding:2rem; margin-top:2rem;
+    }
+    .section-card{
+      background:#fff; border-radius:20px; padding:2rem; margin-bottom:2rem;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1); position:relative; overflow:hidden;
+    }
+    .section-card::before{
+      content:''; position:absolute; top:0; left:0; width:5px; height:100%;
+      background:linear-gradient(180deg,#D4AF37,#FFD700);
+    }
+    .feature-list{
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1rem; margin:2rem 0;
+    }
+    .feature-item{
+      display:flex; align-items:center; gap:1rem; padding:1rem;
+      background:linear-gradient(135deg,#f9fafb,#ffffff);
+      border-radius:15px; transition:all .3s ease;
+    }
+    .feature-item:hover{ transform:translateX(-10px); background:linear-gradient(135deg,#fef3c7,#fde68a); }
+    .feature-icon{
+      width:50px; height:50px; display:flex; align-items:center; justify-content:center;
+      background:linear-gradient(135deg,#D4AF37,#FFD700); color:#fff; border-radius:50%; font-size:1.5rem;
+    }
+
+    .price-box{
+      background:linear-gradient(135deg,#D4AF37,#FFD700,#FDB913);
+      border-radius:30px; padding:3rem; text-align:center; color:#fff;
+      position:sticky; top:100px;
+    }
+    .price-box h3{ font-size:2rem; margin-bottom:1rem; }
+
+    .original-price{
+      position:relative; display:inline-block; padding:0 .25rem; font-size:1.25rem; opacity:.9;
+      color:rgba(255,255,255,.95);
+    }
+    .original-price::after{
+      /* شطب أنيق على السعر الأساسي */
+      content:''; position:absolute; right:-4px; left:-4px; top:50%;
+      height:2px; background:rgba(255,255,255,.9); transform:rotate(-6deg);
+    }
+
+    .sale-price{
+      font-size:3rem; font-weight:800; margin:1rem 0;
+      text-shadow:2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .curriculum-accordion{ margin:2rem 0; }
+    .accordion-item{ background:#fff; border:1px solid #e5e7eb; border-radius:15px; margin-bottom:1rem; overflow:hidden; }
+    .accordion-header{
+      padding:1.5rem; background:linear-gradient(135deg,#f9fafb,#ffffff);
+      cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition:.3s;
+    }
+    .accordion-header:hover{ background:linear-gradient(135deg,#fef3c7,#fde68a); }
+    .accordion-content{ padding:0 1.5rem; max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .accordion-item.active .accordion-content{ max-height:500px; padding:1.5rem; }
+    .accordion-item.active .accordion-header{ background:linear-gradient(135deg,#D4AF37,#FFD700); color:#fff; }
+
+    .golden-note{
+      background:linear-gradient(135deg,#fef3c7,#fde68a);
+      border:2px solid #D4AF37; border-radius:20px; padding:2rem; text-align:center; margin:3rem 0; position:relative;
+    }
+
+    /* أزرار */
+    .btn{ display:inline-block; padding:0.9rem 1.25rem; border-radius:12px; font-weight:700; text-decoration:none; }
+    .btn-lg{ padding:1rem 1.25rem; font-size:1.05rem; }
+    .btn-xl{ padding:1.15rem 1.35rem; font-size:1.1rem; }
+    .btn-primary{ background:#fff; color:var(--primary-gold); }
+    .btn-info{ background:rgba(255,255,255,0.2); color:#fff; border:1px solid rgba(255,255,255,0.5); }
+    .badge{ display:inline-block; border-radius:999px; padding:.5rem 1rem; font-weight:700; }
+    .badge-primary{ background:rgba(255,255,255,0.2); color:#fff; border:1px solid rgba(255,255,255,0.35); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+          <img src="assets/images/logo.png" alt="شعار أكاديمية وجدان" class="logo-image">
+          <span>أكاديمية وجدان</span>
+        </a>
+        <ul class="navbar-menu">
+          <li><a href="index.html" class="navbar-link">الرئيسية</a></li>
+          <li><a href="index.html#featured" class="navbar-link">العروض</a></li>
+          <li><a href="index.html#courses" class="navbar-link">الدورات</a></li>
+          <li><a href="index.html#contact" class="navbar-link">تواصل معنا</a></li>
+        </ul>
+        <div class="navbar-cta">
+          <!-- سنستبدل href لاحقًا عبر JS بالرابط المولّد -->
+          <a href="#" class="btn btn-primary" id="nav-whatsapp">
+            <i class="fab fa-whatsapp"></i> تواصل معنا
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Course Hero -->
+  <section class="course-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:3rem;align-items:start;">
+          <div data-aos="fade-up">
+            <span class="badge badge-primary" style="font-size:1rem;">الأفضل مبيعاً</span>
+            <h1 style="color:#fff;font-size:3rem;margin:1rem 0;">دورة IELTS الاحترافية</h1>
+            <p style="color:rgba(255,255,255,0.9);font-size:1.25rem;line-height:1.8;">
+              برنامج تدريبي متكامل للتحضير لاختبار IELTS والحصول على درجة 7+ مع متابعة شخصية وضمان النتائج.
+            </p>
+
+            <div class="hero-info-box">
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+                <div>
+                  <i class="fas fa-video" style="color:#FFD700;font-size:2rem;"></i>
+                  <p style="color:#fff;margin-top:.5rem;"><strong>32</strong><br>محاضرة</p>
+                </div>
+                <div>
+                  <i class="fas fa-file-alt" style="color:#FFD700;font-size:2rem;"></i>
+                  <p style="color:#fff;margin-top:.5rem;"><strong>200</strong><br>نموذج</p>
+                </div>
+                <div>
+                  <i class="fas fa-clock" style="color:#FFD700;font-size:2rem;"></i>
+                  <p style="color:#fff;margin-top:.5rem;"><strong>4</strong><br>أشهر</p>
+                </div>
+                <div>
+                  <i class="fas fa-infinity" style="color:#FFD700;font-size:2rem;"></i>
+                  <p style="color:#fff;margin-top:.5rem;"><strong>مدى</strong><br>الحياة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Box -->
+          <div class="price-box" data-aos="zoom-in" data-aos-delay="200">
+            <h3>احجز مقعدك الآن</h3>
+
+            <!-- الأسعار من التكوين -->
+            <div class="original-price">
+              <span data-course="ielts" data-price-type="original">—</span> ريال
+            </div>
+
+            <div class="sale-price">
+              <span data-course="ielts" data-price-type="sale">—</span> ريال
+            </div>
+
+            <p style="margin:1rem 0;">
+              وفر <span data-course="ielts" data-price-type="savings">—</span> ريال
+            </p>
+
+            <!-- رسالة العرض -->
+            <div style="
+              margin:1.5rem 0;background:#fff3cd;color:#b54708;padding:.8rem;
+              border-radius:10px;font-weight:700;text-align:center;border:1px solid #f8d7a5;">
+              ⏳ ينتهي قريباً • Soon!!
+            </div>
+
+            <!-- أزرار الشراء -->
+             <!-- ✅ زر التليجرام المعدل -->
+                        <a href="#" class="btn btn-info btn-lg telegram-btn" data-course="ielts" 
+                        style="width: 100%; text-decoration: none; display: block;">
+                            <i class="fab fa-telegram"></i> سجل الآن عبر تليجرام
+                        </a>
+                        
+                        <!-- ✅ زر الواتساب المعدل -->
+                        <a href="#" class="btn btn-lg whatsapp-btn" data-course="ielts"
+                        style="background: rgba(255,255,255,0.2); color: white; width: 100%; margin-top: 1rem; text-decoration: none; display: block;">
+                            <i class="fab fa-whatsapp"></i> سجل عبر واتساب
+                        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Content -->
+  <section class="section">
+    <div class="container">
+      <!-- Overview -->
+      <div class="section-card" data-aos="fade-up">
+        <h2 style="color:var(--primary-gold);margin-bottom:1.5rem;">
+          <i class="fas fa-info-circle"></i> نظرة عامة على الدورة
+        </h2>
+        <p style="line-height:1.8;color:var(--gray);">
+          دورة IELTS الاحترافية مصممة لتغطية مهارات الاستماع والقراءة والكتابة والمحادثة بأساليب عملية ونماذج حديثة، مع دعم مباشر وتقييم مستمر.
+        </p>
+
+        <h3 style="margin-top:2rem;color:var(--dark);">ماذا ستتعلم في هذه الدورة؟</h3>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>مهارات الاستماع المتقدمة</strong>
+              <p style="color:var(--gray);font-size:.9rem;">تقنيات فهم اللهجات والتركيز على التفاصيل</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>استراتيجيات القراءة السريعة</strong>
+              <p style="color:var(--gray);font-size:.9rem;">طرق فعالة للتعامل مع النصوص الأكاديمية الطويلة</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>الكتابة الأكاديمية والعامة</strong>
+              <p style="color:var(--gray);font-size:.9rem;">تحضير Task 1 و Task 2 مع تصحيح شخصي</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>المحادثة والطلاقة</strong>
+              <p style="color:var(--gray);font-size:.9rem;">تدريب مكثف على جميع أجزاء Speaking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curriculum -->
+      <div class="section-card" data-aos="fade-up">
+        <h2 style="color:var(--primary-gold);margin-bottom:1.5rem;">
+          <i class="fas fa-book"></i> المنهج التفصيلي
+        </h2>
+
+        <div class="curriculum-accordion">
+          <!-- Listening -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div>
+                <strong>قسم Listening - الاستماع</strong>
+                <span style="color:var(--gray);margin-right:1rem;">6 محاضرات + 50 صوتيات</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <ul style="list-style:none;padding:0;">
+                <li>المحاضرة 1: أساسيات الاستماع الفعال</li>
+                <li>المحاضرة 2: فهم اللهجات المختلفة</li>
+                <li>المحاضرة 3: استراتيجيات Section 1 & 2</li>
+                <li>المحاضرة 4: استراتيجيات Section 3 & 4</li>
+                <li>المحاضرة 5: التدريب على الاختبارات الكاملة</li>
+                <li>المحاضرة 6: المراجعة النهائية وحل 50 نموذج</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Reading -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div>
+                <strong>قسم Reading - القراءة</strong>
+                <span style="color:var(--gray);margin-right:1rem;">10 محاضرات + 60 نموذج</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <ul style="list-style:none;padding:0;">
+                <li>المحاضرات 1-3: استراتيجيات القراءة السريعة</li>
+                <li>المحاضرات 4-6: أنواع الأسئلة المختلفة</li>
+                <li>المحاضرات 7-8: التدريب على النصوص الأكاديمية</li>
+                <li>المحاضرات 9-10: حل النماذج الفعلية</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Writing -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div>
+                <strong>قسم Writing - الكتابة</strong>
+                <span style="color:var(--gray);margin-right:1rem;">8 محاضرات + تصحيح</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <ul style="list-style:none;padding:0;">
+                <li>المحاضرات 1-4: Task 1 (Academic & General)</li>
+                <li>المحاضرات 5-8: Task 2 (Essays)</li>
+                <li>تصحيح شخصي لكتاباتك</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Speaking -->
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div>
+                <strong>قسم Speaking - المحادثة</strong>
+                <span style="color:var(--gray);margin-right:1rem;">8 محاضرات + جلسات تدريب</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-content">
+              <ul style="list-style:none;padding:0;">
+                <li>المحاضرات 1-3: Part 1 - Introduction</li>
+                <li>المحاضرات 4-6: Part 2 - Long Turn</li>
+                <li>المحاضرات 7-8: Part 3 - Discussion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- Golden Note -->
+            <div class="golden-note" data-aos="zoom-in">
+                <h1 style="color: var(--dark); margin-bottom: 1rem;"></h1>
+                 <h3 style="color: var(--dark); margin-bottom: 1rem;">الدورة ملكك مدى الحياة - لا حذف أبداً!</h3>
+                <p style="color: var(--gray);">
+                    احتفظ بجميع المحاضرات والمواد التعليمية للأبد. يمكنك العودة ومراجعة المحتوى في أي وقت حتى بعد انتهاء الدورة.
+                </p>
+            </div>
+
+            <!-- CTA Section -->
+            <!-- CTA Section -->
+            <div style="text-align: center; padding: 3rem 0;" data-aos="fade-up">
+                <h2 style="color: var(--primary-gold); margin-bottom: 1rem;">لا تفوت الفرصة!</h2>
+                <p style="color: var(--gray); font-size: 1.125rem; margin-bottom: 2rem;">
+                    انضم لأكثر من 5000 طالب نجحوا في اجتياز اختبار IELTS بدرجات عالية
+                </p>
+                <!-- ✅ زر CTA المعدل -->
+                <a href="#" class="btn btn-info btn-xl telegram-btn" data-course="ielts" style="text-decoration: none;">
+                    <i class="fab fa-telegram"></i> سجل الآن واحصل على الخصم
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center" style="color: rgba(255,255,255,0.8);">
+                <p>&copy; 2024 أكاديمية وجدان للتدريب. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/966567409123" class="floating-btn whatsapp">
+            <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://t.me/WejdanAcademy" class="floating-btn telegram">
+            <i class="fab fa-telegram" style="font-size: 1.5rem;"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const allItems = document.querySelectorAll('.accordion-item');
+            allItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            item.classList.toggle('active');
+        }
+    </script>
+    
+</body>
+</html>
